@@ -1,50 +1,37 @@
-%
-% This is a Dippa editor document template. The template suits best for academic papers
-% written in Finnish.
-%
-
-% Add a document type 'article' that suits for academic papers
 \documentclass[a4paper]{article}
 
-% Encoding that fits to Finnish language
+% Encoodaus, joka sopii suomenkielellä (esim. ä ja ö)
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-% Hyphenation for Finnish
+% Suomenkielinen tavutus
 \usepackage[finnish]{babel}
 
-% References.
-% NOTICE: References are currently not supported by Dippa Editor
+% Viitteet
 \usepackage{natbib}
+\defcitealias{rsaanimate}{RSA Animate, 2010}
 
+% Otsikkojen päätteetön fontti
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\large}
+
+% Viitteiden merkit
 \bibpunct{(}{)}{;}{a}{,}{,}
 
-% Begin the document
 \begin{document}
 
-% Document title
-\title{\huge Title \\ \large Subtitle}
-\date{1.1.2012}
-\author{Author name \\ author@email.fi}
+\title{\small T-76.5612 Software Project Management \\ Exercise 5, Pre-Lecture \\ \huge Ihmisten johtaminen}
+\date{20.2.2012}
+\author{Mikko Koski \\ mikko.koski@aalto.fi \\ 66467F}
 \maketitle
 
-\large
+\normalsize
 
-% First section
-\section{Tämä on ensimmäinen iso otsikko, esim. Johdanto}
+\section{Johdanto}
 
-Tässä on johdantokappale
 
-\section{Seuraava iso otsikko}
-
-Tässä on sisältöä seuraavan ison otsikon alla
-
-\subsection{Alaotsikko}
-
-Tässä on alaotsikko ja viittaus esimerkkidokumenttiin \citep{koski2012}
 
 \bibliographystyle{plainnat}
 \bibliography{ref}
 
-% End of the document
 \end{document}
