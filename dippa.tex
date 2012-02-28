@@ -20,6 +20,7 @@
 % page counting, header/footer
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{ifthen}
 
 \pagestyle{fancy}
 \lhead{\footnotesize \parbox{11cm}{} }
@@ -31,6 +32,14 @@
 % \renewcommand{\headheight}{24pt}
 % \renewcommand{\footrulewidth}{0.4pt}
 \renewcommand{\headrulewidth}{0.0pt}
+
+\makeatletter
+\def\LastPagenum{\@ifundefined{r@LastPage}{0}{\expandafter
+\expandafter\expandafter\@cdr
+\csname r@LastPage\endcsname\@nil\null} }
+\makeatother
+\rfoot{\ifthenelse{\isodd{\value{page}} \and \not
+\value{page}=\LastPagenum}{please turn over}{}}
 
 \begin{document}
 
