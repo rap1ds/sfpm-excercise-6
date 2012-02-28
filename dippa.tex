@@ -26,6 +26,9 @@
 \lhead{\footnotesize \parbox{11cm}{} }
 \rhead{\footnotesize \parbox{11cm}{} }
 \lfoot{\footnotesize \parbox{11cm}{Created with Dippa Editor \\ http://mkos.futupeople.com/dippa}}
+\def\LastPagenum{\@ifundefined{r@LastPage}{0}{\expandafter
+    \expandafter\expandafter\@cdr
+    \csname r@LastPage\endcsname\@nil\null} }
 \rfoot{\ifthenelse{\not \value{page}=\LastPagenum}{please turn over}{}}
 % \cfoot{}
 % \rhead{\footnotesize 3}
