@@ -25,9 +25,8 @@
 \pagestyle{fancy}
 \lhead{\footnotesize \parbox{11cm}{} }
 \rhead{\footnotesize \parbox{11cm}{} }
-
-% TOIMII \rfoot{\ifthenelse{\not \thepage=\pageref{LastPage}}{please turn over}{}}
-\ifthenelse{\thepage=\pageref{LastPage}}{\lfoot{\footnotesize \parbox{11cm}{Created with Dippa Editor \\ http://mkos.futupeople.com/dippa}}}{}}
+\lfoot{\footnotesize \parbox{11cm}{\ifthenelse{\not \thepage=\pageref{LastPage}}{Created with Dippa Editor \\ http://mkos.futupeople.com/dippa}{}}}
+% TOIMI\rfoot{\ifthenelse{\not \thepage=\pageref{LastPage}}{please turn over
 % \cfoot{}
 % \rhead{\footnotesize 3}
 % \rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}}
