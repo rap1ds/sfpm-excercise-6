@@ -26,6 +26,7 @@
 \lhead{\footnotesize \parbox{11cm}{} }
 \rhead{\footnotesize \parbox{11cm}{} }
 \lfoot{\footnotesize \parbox{11cm}{Created with Dippa Editor \\ http://mkos.futupeople.com/dippa}}
+\rfoot{\ifthenelse{\not \value{page}=\LastPagenum}{please turn over}{}}
 % \cfoot{}
 % \rhead{\footnotesize 3}
 % \rfoot{\footnotesize Page \thepage\ of \pageref{LastPage}}
@@ -33,13 +34,13 @@
 % \renewcommand{\footrulewidth}{0.4pt}
 \renewcommand{\headrulewidth}{0.0pt}
 
-\makeatletter
-\def\LastPagenum{\@ifundefined{r@LastPage}{0}{\expandafter
-\expandafter\expandafter\@cdr
-\csname r@LastPage\endcsname\@nil\null} }
-\makeatother
-\rfoot{\ifthenelse{\isodd{\value{page}} \and \not
-\value{page}=\LastPagenum}{please turn over}{}}
+% \makeatletter
+% \def\LastPagenum{\@ifundefined{r@LastPage}{0}{\expandafter
+% \expandafter\expandafter\@cdr
+% \csname r@LastPage\endcsname\@nil\null} }
+% \makeatother
+% \rfoot{\ifthenelse{\isodd{\value{page}} \and \not
+% \value{page}=\LastPagenum}{please turn over}{}}
 
 \begin{document}
 
